@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garage PB Auto-Pièces — réparations toutes marques à Charleville-Mézières</title>
+<meta name="description" content="Garage PB Auto-Pièces, rue du Pâquis des Boulets à Charleville-Mézières. Réparations toutes marques et vente de pièces détachées neuves depuis 2007.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --encre:#23282F; --encre-2:#3D454F; --gris:#78818C;
+  --creme:#FAF7F1; --creme-2:#F0EBE1; --blanc:#FFFFFF;
+  --nuit:#191C21; --nuit-2:#252A31;
+  --or:#C08A2E; --or-c:#8F6417; --or-p:#F7EEDC;
+  --rouge:#A8322B;
+  --trait:rgba(35,40,47,.14); --trait-2:rgba(35,40,47,.07);
+  --trait-clair:rgba(255,255,255,.15);
+  --max:1160px; --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--encre);background:var(--creme);font-size:16.5px;line-height:1.63;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.marque{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.018em;line-height:1.06}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 28px}
+
+.bar{position:sticky;top:0;z-index:60;background:rgba(250,247,241,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--trait)}
+.bar .wrap{display:flex;align-items:center;gap:24px;min-height:74px}
+.marque{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marque img{width:44px;height:44px;border-radius:50%}
+.marque span{display:flex;flex-direction:column;gap:2px;line-height:1}
+.marque b{font-size:17.5px}
+.marque em{font-family:Karla,sans-serif;font-style:normal;font-weight:600;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gris)}
+.bar nav{margin-left:auto;display:flex;gap:24px;align-items:center}
+.bar nav a{text-decoration:none;font-size:14.5px;font-weight:500;color:var(--encre-2);transition:color .2s}
+.bar nav a:hover{color:var(--or-c)}
+.tel{display:inline-flex;align-items:center;gap:8px;background:var(--encre);color:#fff!important;padding:11px 18px;border-radius:999px;font-weight:700;font-size:14.5px;text-decoration:none;transition:background .2s}
+.tel:hover{background:var(--or-c)}
+
+.hero{padding:74px 0 82px}
+.hero .wrap{display:grid;grid-template-columns:1.06fr .94fr;gap:56px;align-items:center}
+.kick{display:inline-flex;align-items:center;gap:11px;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or-c);margin-bottom:24px}
+.kick::before{content:"";width:30px;height:2px;background:var(--or)}
+.hero h1{font-size:clamp(35px,5vw,60px)}
+.hero h1 em{font-style:normal;color:var(--or-c)}
+.hero p.chapo{margin-top:24px;font-size:17.5px;color:var(--encre-2);max-width:32em}
+.actions{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:all .2s var(--ease)}
+.btn-p{background:var(--or);color:#1B1408}
+.btn-p:hover{background:var(--or-c);color:#fff}
+.btn-s{border:1.5px solid var(--trait);color:var(--encre)}
+.btn-s:hover{border-color:var(--encre);background:var(--blanc)}
+.hero figure{position:relative;margin:0}
+.hero figure img{border-radius:14px;width:100%}
+.note-photo{position:absolute;left:14px;bottom:14px;background:rgba(25,28,33,.84);backdrop-filter:blur(6px);color:#E7E3DB;font-size:12.5px;padding:7px 12px;border-radius:7px}
+
+.bandeau{background:var(--nuit);color:#D8D3C9;border-top:1px solid var(--trait-clair)}
+.bandeau .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;padding:20px 28px;font-size:14.5px;align-items:center}
+.bandeau b{color:var(--blanc);font-weight:700}
+.bandeau .etoiles{color:var(--or);letter-spacing:.09em}
+
+section{padding:88px 0}
+.tete{max-width:44em;margin-bottom:46px}
+.tete .sur{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or-c);margin-bottom:13px}
+.tete h2{font-size:clamp(27px,3.5vw,38px)}
+.tete p{margin-top:15px;color:var(--gris);font-size:17px}
+
+.cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:18px}
+.carte{background:var(--blanc);border:1px solid var(--trait);border-radius:13px;padding:28px 26px}
+.carte .num{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:12.5px;color:var(--or);letter-spacing:.05em}
+.carte h3{font-size:19.5px;margin:13px 0 11px}
+.carte p{color:var(--gris);font-size:15.5px}
+.carte ul{list-style:none;margin-top:15px;display:flex;flex-direction:column;gap:7px}
+.carte li{font-size:14.5px;color:var(--encre-2);padding-left:16px;position:relative}
+.carte li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:2px;background:var(--or)}
+
+.atelier{background:var(--nuit);color:#EDE9E1}
+.atelier .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center}
+.atelier img{border-radius:14px;width:100%}
+.atelier .sur{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:13px}
+.atelier h2{font-size:clamp(27px,3.5vw,38px);color:var(--blanc)}
+.atelier p{margin-top:16px;color:#BDB8AE;font-size:17px}
+.cite{margin-top:26px;border-left:3px solid var(--or);padding:4px 0 4px 20px;font-size:17px;color:var(--blanc);font-style:italic}
+.cite small{display:block;margin-top:8px;font-style:normal;font-size:13px;color:#8F8A81;letter-spacing:.04em}
+
+.avis{background:var(--creme-2)}
+.avis .boite{background:var(--blanc);border:1px solid var(--trait);border-radius:16px;padding:40px 36px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.note{text-align:center;padding-right:38px;border-right:1px solid var(--trait)}
+.note b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:58px;line-height:1;color:var(--encre)}
+.note .etoiles{display:block;margin-top:9px;color:var(--or);font-size:19px;letter-spacing:.14em}
+.note small{display:block;margin-top:9px;color:var(--gris);font-size:13.5px}
+.avis .texte p{font-size:17px;color:var(--encre-2)}
+.avis .texte p+p{margin-top:13px}
+
+.equipe .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.equipe img{border-radius:14px;width:100%}
+.faits{list-style:none;margin-top:28px;border-top:1px solid var(--trait)}
+.faits li{display:flex;gap:20px;padding:14px 0;border-bottom:1px solid var(--trait);font-size:15.5px}
+.faits li b{font-weight:700;min-width:160px}
+.faits li span{color:var(--gris)}
+
+.contact{background:var(--nuit);color:#EDE9E1}
+.contact .tete h2{color:var(--blanc)}
+.contact .tete p{color:#BDB8AE}
+.contact .carte{background:var(--nuit-2);border-color:var(--trait-clair)}
+.contact .carte .lab{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:12px}
+.contact .carte a,.contact .carte p{font-size:16.5px;font-weight:500;color:var(--blanc);text-decoration:none;word-break:break-word}
+.contact .carte small{display:block;margin-top:9px;color:#8F8A81;font-size:13.5px}
+.horaires{margin-top:22px;background:var(--nuit-2);border:1px solid var(--trait-clair);border-radius:13px;padding:26px}
+.horaires h3{font-size:16px;color:var(--blanc);margin-bottom:14px}
+.horaires dl{display:grid;grid-template-columns:auto 1fr;gap:9px 26px;font-size:15px}
+.horaires dt{color:#BDB8AE}
+.horaires dd{color:var(--blanc);font-weight:500}
+
+footer{background:var(--nuit);color:#8F8A81;border-top:1px solid var(--trait-clair);padding:32px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:13px 28px;align-items:center}
+footer a{color:#BDB8AE;text-decoration:none}
+footer a:hover{color:var(--blanc)}
+footer .sep{margin-left:auto}
+
+.aconf{display:inline-block;vertical-align:middle;margin-left:7px;font-family:Karla,sans-serif;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--rouge);border:1px dashed var(--rouge);border-radius:4px;padding:2px 6px;line-height:1.5;white-space:nowrap}
+
+.demo{position:fixed;right:16px;bottom:16px;z-index:90;background:var(--nuit);color:#fff;border:1px solid var(--trait-clair);border-radius:10px;padding:11px 15px;font-size:12.5px;text-decoration:none;box-shadow:0 10px 28px rgba(0,0,0,.26);transition:transform .2s var(--ease)}
+.demo:hover{transform:translateY(-2px)}
+.demo b{display:block;font-weight:700;letter-spacing:.14em;font-size:10px;text-transform:uppercase;color:var(--or)}
+
+.rev{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.rev.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}}
+
+@media(max-width:900px){
+  .hero .wrap,.atelier .wrap,.equipe .wrap{grid-template-columns:1fr;gap:36px}
+  .hero{padding:52px 0 58px}
+  section{padding:62px 0}
+  .bar nav a:not(.tel){display:none}
+  .avis .boite{grid-template-columns:1fr;gap:26px;padding:30px 24px}
+  .note{padding-right:0;padding-bottom:24px;border-right:0;border-bottom:1px solid var(--trait)}
+  .faits li{flex-direction:column;gap:3px}
+  .faits li b{min-width:0}
+}
+@media(max-width:560px){
+  .wrap{padding:0 18px}
+  .demo{right:10px;bottom:10px;padding:9px 12px;font-size:11.5px}
+  .horaires dl{grid-template-columns:1fr;gap:3px}
+  .horaires dd{margin-bottom:8px}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="marque" href="#">
+      <img src="logo-pb.png" alt="Logo PB Auto-Pièces" width="300" height="300">
+      <span><b>PB Auto-Pièces</b><em>Charleville-Mézières</em></span>
+    </a>
+    <nav>
+      <a href="#prestations">Prestations</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="#garage">Le garage</a>
+      <a class="tel" href="tel:+33324327079">03 24 32 70 79</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kick">Rue du Pâquis des Boulets · depuis 2007</p>
+      <h1>Réparations toutes marques,<br><em>et la pièce avec.</em></h1>
+      <p class="chapo">Le garage et le magasin de pièces détachées au même endroit, à Charleville-Mézières. On diagnostique, on répare, et la pièce neuve est déjà sur l'étagère.</p>
+      <div class="actions">
+        <a class="btn btn-p" href="tel:+33324327079">Appeler le garage</a>
+        <a class="btn btn-s" href="#prestations">Voir les prestations</a>
+      </div>
+    </div>
+    <figure>
+      <img src="facade.jpg" alt="Façade du garage PB Auto-Pièces, rue du Pâquis des Boulets à Charleville-Mézières" width="1568" height="1100">
+      <figcaption class="note-photo">3 rue du Pâquis des Boulets, Charleville-Mézières</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="bandeau">
+  <div class="wrap">
+    <span><span class="etoiles">★★★★★</span> <b>4,7 sur 5</b> · 53 avis Google<span class="aconf">à confirmer</span></span>
+    <span><b>Depuis 2007</b> · entreprise familiale</span>
+    <span><b>Toutes marques</b> · réparation et pièces neuves</span>
+  </div>
+</div>
+
+<section id="prestations">
+  <div class="wrap">
+    <div class="tete rev">
+      <p class="sur">Prestations</p>
+      <h2>Ce qu'on fait sur votre voiture</h2>
+      <p>Entretien courant, mécanique, diagnostic. Et si la pièce manque, elle est au magasin, à deux mètres de l'atelier.</p>
+    </div>
+    <div class="cartes rev">
+      <article class="carte">
+        <p class="num">01</p>
+        <h3>Entretien courant</h3>
+        <p>Ce qui revient tous les ans et qu'il vaut mieux ne pas repousser.</p>
+        <ul>
+          <li>Vidange et filtres</li>
+          <li>Freins, plaquettes et disques</li>
+          <li>Amortisseurs</li>
+          <li>Contrôle avant départ en vacances</li>
+        </ul>
+      </article>
+      <article class="carte">
+        <p class="num">02</p>
+        <h3>Mécanique</h3>
+        <p>Les interventions lourdes, faites à l'atelier, sur toutes les marques.</p>
+        <ul>
+          <li>Distribution</li>
+          <li>Embrayage</li>
+          <li>Échappement</li>
+          <li>Remise en état</li>
+        </ul>
+      </article>
+      <article class="carte">
+        <p class="num">03</p>
+        <h3>Diagnostic</h3>
+        <p>Un voyant s'allume, un bruit apparaît : on cherche avant de changer.</p>
+        <ul>
+          <li>Lecture des défauts</li>
+          <li>Recherche de panne</li>
+          <li>Devis avant intervention<span class="aconf">à confirmer</span></li>
+        </ul>
+      </article>
+      <article class="carte">
+        <p class="num">04</p>
+        <h3>Pièces détachées neuves</h3>
+        <p>Le magasin est ouvert aux particuliers, que vous fassiez réparer ici ou chez vous.</p>
+        <ul>
+          <li>Pièces neuves toutes marques</li>
+          <li>Filtration, freinage, distribution</li>
+          <li>Huiles et consommables</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="atelier" class="atelier">
+  <div class="wrap">
+    <img class="rev" src="atelier.jpg" alt="Intérieur de l'atelier PB Auto-Pièces, une voiture sur le pont" width="962" height="561">
+    <div class="rev">
+      <p class="sur">L'atelier</p>
+      <h2>Un garage de quartier, pas une chaîne</h2>
+      <p>Deux ponts, un magasin de pièces, et les mêmes personnes qui vous reçoivent au comptoir et qui travaillent sur votre voiture. Ouvert depuis août 2007 rue du Pâquis des Boulets.</p>
+      <blockquote class="cite">
+        Vidange, freins, distribution, diagnostics, amortisseurs, embrayage etc. On vous attend pour entretenir vos belles.
+        <small>L'équipe PB Auto-Pièces</small>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap">
+    <div class="tete rev">
+      <p class="sur">Vos avis</p>
+      <h2>Ce que disent les clients</h2>
+    </div>
+    <div class="boite rev">
+      <div class="note">
+        <b>4,7</b>
+        <span class="etoiles">★★★★★</span>
+        <small>53 avis Google<span class="aconf">à confirmer</span></small>
+      </div>
+      <div class="texte">
+        <p>Les retours reviennent toujours sur les mêmes trois choses : la réactivité, le prix annoncé qui est le prix payé, et la voiture rendue vite, souvent le jour même.</p>
+        <p>Un avis vaut mieux qu'une promesse. Si vous êtes déjà passé au garage, un mot sur Google aide le prochain à se décider.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="garage" class="equipe">
+  <div class="wrap">
+    <div class="rev">
+      <p class="sur" style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or-c);margin-bottom:13px">Le garage</p>
+      <h2 style="font-size:clamp(27px,3.5vw,38px)">Philippe et Bruno, depuis dix-neuf ans</h2>
+      <p style="margin-top:15px;color:var(--gris);font-size:17px">Le « PB » de PB Auto-Pièces, ce sont eux deux. La SARL a été créée le 3 août 2007 et n'a jamais bougé de la rue du Pâquis des Boulets.</p>
+      <ul class="faits">
+        <li><b>Activité</b><span>Entretien et réparation de véhicules automobiles légers (45.20A)</span></li>
+        <li><b>Créée le</b><span>3 août 2007, à Charleville-Mézières</span></li>
+        <li><b>Gérant</b><span>Bruno Coquet</span></li>
+        <li><b>Associé</b><span>Philippe Coquet</span></li>
+        <li><b>Équipe</b><span>1 à 2 salariés en plus des gérants</span></li>
+        <li><b>Deux métiers</b><span>Atelier de réparation et magasin de pièces neuves</span></li>
+      </ul>
+    </div>
+    <img class="rev" src="accueil.jpg" alt="Philippe et Bruno Coquet au comptoir du garage PB Auto-Pièces" width="1568" height="940" loading="lazy">
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="tete rev">
+      <p class="sur">Contact</p>
+      <h2>Passer, appeler, écrire</h2>
+      <p>Le plus rapide reste le téléphone : on vous dit tout de suite si on peut prendre la voiture et à peu près ce que ça représente.</p>
+    </div>
+    <div class="cartes rev">
+      <div class="carte">
+        <p class="lab">Téléphone</p>
+        <a href="tel:+33324327079">03 24 32 70 79</a>
+        <small>Le numéro de l'enseigne. Second numéro : 09 87 51 25 86<span class="aconf">à confirmer</span></small>
+      </div>
+      <div class="carte">
+        <p class="lab">E-mail</p>
+        <a href="mailto:Pbautopieces@hotmail.fr">Pbautopieces@hotmail.fr</a>
+        <small>Pour une demande de pièce avec la carte grise</small>
+      </div>
+      <div class="carte">
+        <p class="lab">Adresse</p>
+        <p>3 rue du Pâquis des Boulets<br>08000 Charleville-Mézières</p>
+        <small>Parking devant le garage</small>
+      </div>
+    </div>
+    <div class="horaires rev">
+      <h3>Horaires d'ouverture<span class="aconf">à confirmer</span></h3>
+      <dl>
+        <dt>Lundi</dt><dd>14h – 18h30</dd>
+        <dt>Mardi à vendredi</dt><dd>8h30 – 12h et 14h – 18h</dd>
+        <dt>Samedi</dt><dd>9h – 13h</dd>
+        <dt>Dimanche</dt><dd>Fermé</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>PB Auto Pièces SARL · garage et pièces détachées, Charleville-Mézières (08)</span>
+    <a class="sep" href="mentions-legales.html">Mentions légales</a>
+  </div>
+</footer>
+
+<a class="demo" href="https://kraon.netlify.app/offre" target="_blank" rel="noopener">
+  <b>Démo KRAON</b>
+  Maquette de démonstration
+</a>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rev');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
